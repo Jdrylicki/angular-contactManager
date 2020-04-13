@@ -1,0 +1,23 @@
+<h2>Add Contact</h2>
+<div>
+  <label>First Name: <br>
+    <input #first />
+  </label>
+</div>
+<div>
+  <label>Last Name: <br> 
+    <input #last/>
+  </label>
+</div>
+<div>
+  <label>Phone Number: <br>
+    <input #phone/>
+  </label>
+</div>
+<div>
+  <label>Email: <br>
+    <input #e/>
+  </label>
+</div>
+<button (click)= "save(first.value, last.value, phone.value, e.value);">Save</button>
+<button (click)= "cancel('list')">Cancel</button>

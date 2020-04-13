@@ -1,0 +1,11 @@
+<div class="contact">
+    <div>
+    {{inputContact.firstName}} {{inputContact.lastName}}
+    <div class="info"> 
+    {{inputContact.phoneNum}} <br> {{inputContact.email}}
+    </div>
+    </div>
+   <button (click) = "editClick('edit')">Edit</button> 
+    <button (click)="delete()">Delete</button>
+</div>
+ 

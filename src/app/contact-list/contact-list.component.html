@@ -1,0 +1,11 @@
+
+<nav>
+  <a (click)="toggleEditor('list')">Contact List</a>
+  <a (click)="toggleEditor('add')">Add Contact</a>
+</nav>
+<div *ngIf="showListEditor">
+<app-contact *ngFor="let contact of contacts" [inputContact] = "contact" (editorEvent)= "toggleEditor($event)"(contactEvent)= "contactConnect($event)"></app-contact>
+</div>
+<app-add-contact *ngIf="showAddEditor" (editorEvent)= "toggleEditor($event)"></app-add-contact>
+<app-edit-contact [inputContact] = "currentContact" *ngIf="showEditEditor"(editorEvent)= "toggleEditor($event)"></app-edit-contact>
+
